@@ -1,0 +1,41 @@
+/* Brand Colors */
+:root {
+    --brand-primary: #191919;
+    --brand-accent: #9FE3A9;
+    --brand-text: #ffffff;
+    --brand-text-secondary: #a1a1a1;
+    --brand-border: #191919;
+}
+
+/* Font Family */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Brand Utilities */
+.brand-accent {
+    color: var(--brand-accent);
+}
+
+.bg-brand-accent {
+    background-color: var(--brand-accent);
+}
+
+.border-brand-accent {
+    border-color: var(--brand-accent);
+}
+
+.text-brand-accent {
+    color: var(--brand-accent);
+}
+
+/* Navigation Scroll Effect */
+nav {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+}
+
