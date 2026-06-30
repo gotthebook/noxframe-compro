@@ -54,9 +54,7 @@ function handleSmoothScroll(event) {
  * Email Service Setup
  */
 function initEmailService() {
-    // Initialize EmailJS with your credentials
-    // Sign up at https://www.emailjs.com and get these values
-    emailjs.init('YOUR_PUBLIC_KEY_HERE');
+    // Email service disabled for now; add it back later when ready.
 }
 
 /**
@@ -113,7 +111,12 @@ function submitForm(form, formData) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Send email via EmailJS
+    if (typeof emailjs === 'undefined' || typeof emailjs.send !== 'function') {
+        completeFormSubmission(submitBtn, originalText, originalOpacity);
+        form.reset();
+        return;
+    }
+
     emailjs.send(
         'gmail',  // Service ID
         'contact_form',  // Template ID
@@ -193,17 +196,16 @@ function highlightNavLink(link, currentSection) {
  * Navigation Scroll Effect
  */
 function initNavScroll() {
-    window.addEventListener('scroll', handleNavScroll);
+    handleNavScroll();
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
 }
 
 function handleNavScroll() {
     const nav = document.querySelector('nav');
-    
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
+
+    if (!nav) return;
+
+    nav.classList.toggle('scrolled', window.scrollY > 50);
 }
 
 /**
