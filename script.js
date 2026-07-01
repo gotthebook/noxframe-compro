@@ -45,7 +45,7 @@ function handleSmoothScroll(event) {
 }
 
 function initEmailService() {
-    emailjs.init('YOUR_PUBLIC_KEY_HERE');
+    // Email service disabled for now; add it back later when ready.
 }
 
 function initContactForm() {
@@ -98,6 +98,12 @@ function submitForm(form, formData) {
 
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
+
+    if (typeof emailjs === 'undefined' || typeof emailjs.send !== 'function') {
+        completeFormSubmission(submitBtn, originalText, originalOpacity);
+        form.reset();
+        return;
+    }
 
     emailjs.send(
         'gmail',
@@ -170,6 +176,26 @@ function highlightNavLink(link, currentSection) {
     link.classList.toggle('text-brand-accent', isActive);
     link.classList.toggle('text-gray-400', !isActive);
 }
+
+/**
+ * Navigation Scroll Effect
+ */
+function initNavScroll() {
+    handleNavScroll();
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+}
+
+function handleNavScroll() {
+    const nav = document.querySelector('nav');
+
+    if (!nav) return;
+
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+}
+
+/**
+ * Portfolio Carousel Navigation
+ */
 
 function initCarouselNavigation() {
     const prevBtn = document.getElementById('prev-work');
