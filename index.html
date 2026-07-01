@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noxframe</title>
+    <title>noxframe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,20 +12,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="scroll-smooth bg-[#111111] text-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-transparent z-50">
+    <nav class="fixed top-0 w-full z-50 bg-[#111111]/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-semibold">noxframe.</div>
                 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-12">
                     <a href="#services" class="text-gray-400 hover:text-white transition text-sm">OUR SERVICES</a>
                     <a href="#works" class="text-gray-400 hover:text-white transition text-sm">WORKS</a>
                     <a href="#contact" class="text-gray-400 hover:text-white transition text-sm">CONTACT US</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="menu-btn" class="md:hidden text-2xl">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -33,7 +30,6 @@
                 </button>
             </div>
 
-            <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
                 <a href="#services" class="block py-2 text-gray-400 hover:text-white">OUR SERVICES</a>
                 <a href="#works" class="block py-2 text-gray-400 hover:text-white">WORKS</a>
@@ -42,17 +38,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-40 pb-20 px-6 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
-        <!-- Background Video -->
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
             <source src="/assets/bg-video.mp4" type="video/mp4">
         </video>
 
-        <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/90"></div>
 
-        <!-- Content -->
         <div class="max-w-4xl text-center relative z-10">
             <h2 class="text-5xl md:text-5xl font-bold mb-8 leading-tight">
                 Your Vision, Our Obsession
@@ -70,29 +62,27 @@
         </div>
     </section>
 
-
-    <!-- Services Section -->
     <section id="services" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16">
                 <p class="text-brand-accent text-sm font-medium mb-4">OUR SERVICES</p>
-                <h2 class="text-3xl md:text-3xl font-semibold">End-to-end solutions, built to last</h2>
+                <h2 class="text-2xl md:text-2xl font-medium">End-to-end solutions, built to last</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#191919] opacity-80 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
+                <div class="bg-[#191919] p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
                     <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center text-black text-xl mb-6 font-bold"><img src="/assets/ic-search.svg" alt="search icon" class="w-6 h-6"></div>
                     <h3 class="text-lg font-semibold text-white mb-4">User Research</h3>
                     <p class="text-gray-400">In-depth discovery phases that uncover user needs and industry benchmarks to align your vision with market reality.</p>
                 </div>
 
-                <div class="bg-[#191919] opacity-80 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
+                <div class="bg-[#191919] p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
                     <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center text-black text-xl mb-6 font-bold"><img src="/assets/ic-pen-tool.svg" alt="design icon" class="w-6 h-6"></div>
                     <h3 class="text-lg font-semibold text-white mb-4">Web & App Design</h3>
                     <p class="text-gray-400">Creating intuitive, visually compelling digital experiences that delight users and drive conversions through thoughtful patterns.</p>
                 </div>
 
-                <div class="bg-[#191919] opacity-80 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
+                <div class="bg-[#191919] p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition">
                     <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center text-black text-xl mb-6 font-bold"><img src="/assets/ic-code.svg" alt="development icon" class="w-6 h-6"></div>
                     <h3 class="text-lg font-semibold text-white mb-4">Development</h3>
                     <p class="text-gray-400">Performance-first engineering for products that need to grow, scale flawlessly, and stay add.</p>
@@ -102,46 +92,44 @@
     </section>
     </section>
 
-    <!-- Works Section -->
     <section id="works" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-start mb-16">
                 <div>
                     <p class="text-brand-accent text-sm font-medium mb-4">SELECTED WORKS</p>
-                    <h2 class="text-3xl md:text-3xl font-semibold">High-performance builds we're proud of</h2>
-                </div>
-                <div class="hidden md:flex gap-4">
-                    <button id="prev-work" class="w-10 h-10 border border-gray-700 rounded-md flex items-center justify-center hover:border-white transition">←</button>
-                    <button id="next-work" class="w-10 h-10 border border-gray-700 rounded-md flex items-center justify-center hover:border-white transition">→</button>
+                    <h2 class="text-2xl md:text-2xl font-medium">High-performance builds we're proud of</h2>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-gray-900 h-96 rounded-xl border border-gray-800 flex items-center justify-center text-gray-600">
-                    <div class="text-center">
-                        <p class="text-sm mb-4">Project Mockup</p>
-                        <div class="text-6xl">📱 💻</div>
+                <div class="relative h-96 rounded-xl border border-gray-800 overflow-hidden bg-gray-900 hover:border-gray-700 transition">
+                    <img src="/assets/project-1.svg" alt="Project preview" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="space-y-2 absolute bottom-0 left-0 p-8">
+                        <p class="text-brand-accent text-xs font-medium">EVENT & LIFESTYLE • 2026</p>
+                        <h5 class="text-2xl font-medium">Wedding Invitation</h5>
+                        <button class="text-brand-accent hover:text-white transition font-medium">View Project →</button>
                     </div>
                 </div>
 
-                <div>
-                    <p class="text-brand-accent text-xs font-medium mb-4">EVENT & LIFESTYLE • 2026</p>
-                    <h3 class="text-2xl font-medium mb-6">Please: Property Leasing App</h3>
-                    <p class="text-gray-400 text-base mb-8">
-                        Seamless leasing platform connecting landlords and tenants with real-time analytics.
-                    </p>
+                <!--<div class="relative h-96 rounded-xl border border-gray-800 overflow-hidden bg-gray-900 hover:border-gray-700 transition">
+                    <img src="https://via.placeholder.com/900x600?text=Project+Mockup" alt="Project preview" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="space-y-2 absolute bottom-0 left-0 p-8">
+                        <p class="text-brand-accent text-xs font-medium">EVENT & LIFESTYLE • 2026</p>
+                        <h3 class="text-2xl font-medium">Please: Property Leasing App</h3>
                     <button class="text-brand-accent hover:text-white transition font-medium">View Project →</button>
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
 
-    <!-- Working Process Section -->
     <section id="process" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-24">
                 <p class="text-brand-accent text-sm font-medium mb-4">OUR METHODOLOGY</p>
-                <h2 class="text-3xl md:text-3xl font-semibold">Building ideas, Delivering Solutions</h2>
+                <h2 class="text-2xl md:text-2xl font-medium">Building ideas, Delivering Solutions</h2>
             </div>
 
             <div class="grid md:grid-cols-4 gap-8">
@@ -172,12 +160,11 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-4">
                 <p class="text-brand-accent text-sm font-medium mb-4">CONTACT US</p>
-                <h2 class="text-3xl md:text-3xl font-semibold">Let's Talk About Your Next Project</h2>
+                <h2 class="text-2xl md:text-2xl font-medium">Let's Talk About Your Next Project</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
@@ -191,7 +178,7 @@
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center text-black text-lg mt-1 flex-shrink-0"><img src="/assets/ic-whatsapp.svg" alt="whatsapp icon" class="w-6 h-6"></div>
                             <div>
-                                <p class="text-gray-400 text-sm mb-1">Whatsapp Number</p>
+                                <p class="text-gray-400 text-sm mb-1">Whatsapp</p>
                                 <a href="https://wa.me/6285171557990" class="text-white hover:text-brand-accent transition font-semibold">+62 851 7155 7990</a>
                             </div>
                         </div>
@@ -216,7 +203,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-12 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <p class="text-gray-500">© 2026 noxframe.</p>

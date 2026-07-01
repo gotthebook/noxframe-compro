@@ -1,6 +1,3 @@
-/**
- * Mobile Menu Management
- */
 function initMobileMenu() {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -25,9 +22,6 @@ function closeMobileMenu() {
     mobileMenu.classList.add('hidden');
 }
 
-/**
- * Smooth Scroll Navigation
- */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', handleSmoothScroll);
@@ -50,18 +44,10 @@ function handleSmoothScroll(event) {
     }
 }
 
-/**
- * Email Service Setup
- */
 function initEmailService() {
-    // Initialize EmailJS with your credentials
-    // Sign up at https://www.emailjs.com and get these values
     emailjs.init('YOUR_PUBLIC_KEY_HERE');
 }
 
-/**
- * Contact Form Handler
- */
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     
@@ -113,10 +99,9 @@ function submitForm(form, formData) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Send email via EmailJS
     emailjs.send(
-        'gmail',  // Service ID
-        'contact_form',  // Template ID
+        'gmail',
+        'contact_form',
         {
             to_email: 'noxframe.studio@gmail.com',
             from_name: formData.name,
@@ -153,9 +138,6 @@ function resetFormButton(btn, originalText, originalOpacity) {
     btn.disabled = false;
 }
 
-/**
- * Active Navigation Highlight
- */
 function initActiveNavigation() {
     window.addEventListener('scroll', updateActiveNavigation);
 }
@@ -189,26 +171,6 @@ function highlightNavLink(link, currentSection) {
     link.classList.toggle('text-gray-400', !isActive);
 }
 
-/**
- * Navigation Scroll Effect
- */
-function initNavScroll() {
-    window.addEventListener('scroll', handleNavScroll);
-}
-
-function handleNavScroll() {
-    const nav = document.querySelector('nav');
-    
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-}
-
-/**
- * Portfolio Carousel Navigation
- */
 function initCarouselNavigation() {
     const prevBtn = document.getElementById('prev-work');
     const nextBtn = document.getElementById('next-work');
@@ -219,9 +181,6 @@ function initCarouselNavigation() {
     nextBtn.addEventListener('click', () => console.log('Next project'));
 }
 
-/**
- * Intersection Observer for Animations
- */
 function initIntersectionObserver() {
     const observerOptions = {
         threshold: 0.1,
@@ -241,16 +200,12 @@ function handleIntersection(entries) {
     });
 }
 
-/**
- * Initialize All Features
- */
 function initializeWebsite() {
     initEmailService();
     initMobileMenu();
     initSmoothScroll();
     initContactForm();
     initActiveNavigation();
-    initNavScroll();
     initCarouselNavigation();
     initIntersectionObserver();
     setupScrollPadding();
@@ -263,9 +218,6 @@ function setupScrollPadding() {
     document.body.style.opacity = '1';
 }
 
-/**
- * Start Application
- */
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeWebsite);
 } else {
