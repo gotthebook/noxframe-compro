@@ -99,28 +99,21 @@ function submitForm(form, formData) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    if (typeof emailjs === 'undefined' || typeof emailjs.send !== 'function') {
-        completeFormSubmission(submitBtn, originalText, originalOpacity);
-        form.reset();
-        return;
-    }
+    // Replace this URL with your Google Apps Script Web App URL
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzWCBW2pVZZXaEHaaV2wTw4wXkhS7D2qXLG520dCq5iTd8r6gx67MJEfoGzFhyYP00pSA/exec';
 
-    emailjs.send(
-        'gmail',
-        'contact_form',
-        {
-            to_email: 'noxframe.studio@gmail.com',
-            from_name: formData.name,
-            from_email: formData.email,
-            message: formData.message
-        }
-    )
+    fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+    })
     .then(() => {
         completeFormSubmission(submitBtn, originalText, originalOpacity);
         form.reset();
     })
     .catch((error) => {
-        console.error('Email send failed:', error);
+        console.error('Failed to save to Google Sheets:', error);
         submitBtn.textContent = 'Failed to send';
         submitBtn.style.opacity = '0.7';
         setTimeout(() => {
