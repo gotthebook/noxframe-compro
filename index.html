@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>noxframe</title>
+    <link rel="icon" type="image/png" href="./assets/noxframe..svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -47,10 +48,10 @@
         <div class="absolute inset-0 bg-black/80"></div>
 
         <div class="max-w-4xl text-center relative z-10">
-            <h2 class="text-5xl md:text-5xl font-bold mb-8 leading-tight">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
                 Your Vision, Our Obsession
             </h2>
-            <p class="text-xl md:text-xl text-gray-400 mb-16 leading-relaxed">
+            <p class="text-lg md:text-xl text-gray-400 mb-16 leading-relaxed">
                 We dig into user behavior, craft thoughtful interfaces, and build them into reality
             </p>
             <div class="flex justify-center">
@@ -103,25 +104,17 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative h-96 rounded-xl border border-gray-800 overflow-hidden bg-gray-900 hover:border-gray-700 transition">
-                    <img src="./assets/project-1.svg" alt="Project preview" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                    <div class="space-y-2 absolute bottom-0 left-0 p-8">
-                        <p class="text-brand-accent text-xs font-medium">EVENT & LIFESTYLE • 2026</p>
-                        <h5 class="text-2xl font-medium">Wedding Invitation</h5>
-                        <button class="text-brand-accent hover:text-white transition font-medium">View Project →</button>
+                <div class="rounded-xl border border-gray-800 overflow-hidden bg-[#191919] hover:border-gray-700 transition">
+                    <img src="./assets/project-1.svg" alt="Wedding Invitation - 3 phone mockups" class="w-full">
+                    <div class="p-6 flex items-center justify-between">
+                        <div>
+                            <p class="text-brand-accent text-xs font-medium">EVENT & LIFESTYLE • 2026</p>
+                            <h5 class="text-xl font-medium mt-1">Digital Wedding Invitation</h5>
+                            <p class="text-gray-400 text-sm mt-1">Features a live countdown, integrated Google Maps directions and calendar sync, plus guest messages and digital gifting via QRIS.</p>
+                        </div>
+                        <button class="text-brand-accent hover:text-white transition font-medium flex-shrink-0 ml-4">View Project →</button>
                     </div>
                 </div>
-
-                <!--<div class="relative h-96 rounded-xl border border-gray-800 overflow-hidden bg-gray-900 hover:border-gray-700 transition">
-                    <img src="https://via.placeholder.com/900x600?text=Project+Mockup" alt="Project preview" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                    <div class="space-y-2 absolute bottom-0 left-0 p-8">
-                        <p class="text-brand-accent text-xs font-medium">EVENT & LIFESTYLE • 2026</p>
-                        <h3 class="text-2xl font-medium">Please: Property Leasing App</h3>
-                    <button class="text-brand-accent hover:text-white transition font-medium">View Project →</button>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -171,13 +164,21 @@
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <p class="text-gray-400 text-base mb-8">
-                        Ready to transform your ideas into high-performance digital reality? Our team of experts is here to help.
+                        Ready to transform your ideas into high-performance digital reality? Fill out the form and our team of experts is here to help.
                     </p>
 
-                    <div class="space-y-6">
+                    <div class="space-y-8">
                         
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center text-black text-lg mt-1 flex-shrink-0"><img src="/assets/ic-whatsapp.svg" alt="whatsapp icon" class="w-6 h-6"></div>
+                            <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center text-black text-lg mt-1 flex-shrink-0"><img src="./assets/ic-email.svg" alt="email icon" class="w-6 h-6"></div>
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Email</p>
+                                <a href="mailto:noxframe.studio@gmail.com" class="text-white hover:text-brand-accent transition font-semibold">noxframe.studio@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center text-black text-lg mt-1 flex-shrink-0"><img src="./assets/ic-whatsapp.svg" alt="whatsapp icon" class="w-6 h-6"></div>
                             <div>
                                 <p class="text-gray-400 text-sm mb-1">Whatsapp</p>
                                 <a href="https://wa.me/6285171557990" class="text-white hover:text-brand-accent transition font-semibold">+62 851 7155 7990</a>
@@ -186,16 +187,16 @@
                     </div>
                 </div>
 
-                <div class="bg-[#191919] opacity-80 p-8 rounded-xl border border-gray-800">
+                <div class="bg-white p-8 rounded-xl border border-gray-800">
                     <form id="contact-form" class="space-y-6">
                         <div>
-                            <input type="text" placeholder="Full Name" class="w-full bg-[#191919] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required>
+                            <input type="text" placeholder="Full Name" class="w-full bg-slate-50 border border-gray-300 rounded-lg px-4 py-3 text-black placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required>
                         </div>
                         <div>
-                            <input type="email" placeholder="Email Address" class="w-full bg-[#191919] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required>
+                            <input type="email" placeholder="Email Address" class="w-full bg-slate-50 border border-gray-300 rounded-lg px-4 py-3 text-black placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required>
                         </div>
                         <div>
-                            <textarea placeholder="Tell us about your project..." rows="5" class="w-full bg-[#191919] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required></textarea>
+                            <textarea placeholder="Tell us about your project..." rows="5" class="w-full bg-slate-50 border border-gray-300 rounded-lg px-4 py-3 text-black placeholder-gray-500 focus:outline-none focus:border-brand-accent transition" required></textarea>
                         </div>
                         <button type="submit" class="w-full bg-brand-accent text-green-900 py-3 rounded-lg font-semibold hover:opacity-90 transition">Send Message</button>
                     </form>
@@ -205,12 +206,8 @@
     </section>
 
     <footer class="py-12 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="max-w-3xl mx-auto flex justify-center items-center">
             <p class="text-gray-500">© 2026 noxframe.</p>
-            <div class="flex gap-8">
-                <a href="#" class="text-gray-500 hover:text-white transition text-sm">Privacy Policy</a>
-                <a href="#" class="text-gray-500 hover:text-white transition text-sm">Terms of Service</a>
-            </div>
         </div>
     </footer>
 
